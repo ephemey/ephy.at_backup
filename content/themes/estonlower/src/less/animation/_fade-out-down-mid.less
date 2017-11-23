@@ -1,0 +1,28 @@
+//
+// Fade Out Down Middle.
+// -----------------------------------------------------------------------------
+// Element fades / slides out and down, from half a space below its current position, 
+// central to its parent element.
+//
+
+[data-ani="fade-out-down-mid"] {
+  animation-name: fade-out-down-mid;
+}
+.ie [data-ani="fade-out-down-mid"] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// Keyframes.
+@keyframes fade-out-down-mid {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translate( 50%, 0 );
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate( 50%, @space / 2 );
+  }
+}

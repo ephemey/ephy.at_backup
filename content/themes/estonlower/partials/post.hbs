@@ -1,0 +1,88 @@
+{{!
+
+    Renders:
+      Post Author
+      Post Title
+      Post Media
+      Post Excerpt
+      Post Content
+      Post Types
+      Post More
+      Post Tags
+      Post Date
+      Post Comments Count
+      Post Shares
+      Post Comments
+
+    Microdata:
+      BlogPosting
+
+}}
+
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post{{^if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}} post--text{{/has}}{{/if}}{{#if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}} post--photo post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="quote, _link, _chat, _video"}}{{#has tag="_audio"}} post--audio post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="quote, _link, _audio, _chat"}}{{#has tag="_video"}} post--video post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="_link, _chat, _audio, _video"}}{{#has tag="_quote"}} post--quote{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="_quote, _chat, _audio, _video"}}{{#has tag="_link"}} post--link{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="_link, _quote, _audio, _video"}}{{#has tag="_chat"}} post--chat{{/has}}{{/has}}{{/if}}{{^is "post, page"}} post--index{{/is}}{{#is "post"}} post--permalink{{/is}}{{#is "page"}} post--page{{/is}} main-item main-post" id="{{id}}" data-ani="hide" data-js="post{{#has tag="_overlay"}} hover{{/has}}" data-permalink="{{url absolute="true"}}">
+
+  <div class="post-inner" {{#if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}}{{#has tag="_overlay"}}data-js="hover-inner"{{/has}}{{/has}}{{/if}}>
+
+    <header class="post-item post-header">
+      <div class="wrapper post-wrapper">
+
+      {{! Author }}
+      {{> "post/author" }}
+
+      </div>
+    </header>
+
+    {{! Media }}
+    {{> "post/media" }}
+
+    <section class="post-item post-body">
+      <div class="wrapper post-wrapper">
+
+      {{! Title }}
+      {{> "post/title" }}
+
+      {{! Excerpt }}
+      {{> "post/excerpt" }}
+
+      {{! Types }}
+      {{> "post/types" }}
+
+{{! Content }}
+{{> "post/content" }}
+
+      {{! Read More }}
+      {{> "post/more" }}
+        
+      {{! Tags }}
+      {{> "post/tags" }}
+
+      </div>
+    </section>
+
+    {{^is "page"}}
+    <footer class="post-item post-footer" {{#if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}}{{#has tag="_overlay"}}data-ani="hide" data-js="hover-footer"{{/has}}{{/has}}{{/if}}>
+      <div class="wrapper post-wrapper">
+
+        <div class="meta post-meta">
+
+          {{! Date }}
+          {{> "post/date"}}
+
+          {{! Comments Count }}
+          {{> "post/comments-count" }}
+
+          {{! Shares }}
+          {{> "post/shares" }}
+
+        </div>
+
+      </div>
+    </footer>
+    {{/is}}
+
+    {{! Comments }}
+    {{> "post/comments" }}
+
+  </div>
+
+</article>

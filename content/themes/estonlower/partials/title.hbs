@@ -1,0 +1,14 @@
+{{!
+
+    Renders:
+      Header Title
+
+    Microdata:
+      Blog Name
+      Blog URL
+
+}}
+
+<h1 itemprop="name" class="header-item header-title">
+  <a itemprop="url" href="{{@blog.url}}" title="{{@blog.title}}">{{@blog.title}}</a>
+</h1>

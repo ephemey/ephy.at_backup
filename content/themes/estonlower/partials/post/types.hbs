@@ -1,0 +1,24 @@
+{{!
+
+    Renders:
+      List       - Chat
+      Anchor     - Link
+      Blockquote - Quote
+
+}}
+
+{{^if image}}
+
+{{#has tag="_chat"}}
+  {{content}}
+{{/has}}
+
+{{#has tag="_link"}}
+  {{content}}
+{{/has}}
+
+{{#has tag="_quote"}}
+  {{content}}
+{{/has}}
+
+{{/if}}

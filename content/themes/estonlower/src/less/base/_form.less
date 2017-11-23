@@ -1,0 +1,56 @@
+//
+// Form.
+// -----------------------------------------------------------------------------
+// A form.
+//
+// <form class="form">
+//   <input type="input" class="form-input"></input>
+//   <input type="submit" class="form-submit"></input>
+// </form>
+//
+
+// Block.
+.form {
+  &:extend( .whitespace );
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.form > *:last-child {
+  &:extend( .wrapper > *:last-child );
+}
+
+// Elements.
+.form-label {
+  &:extend( .whitespace );
+  float: left;
+  width: 100%;
+}
+.form-input {
+  &:extend( .whitespace );
+  float: left;
+  width: 100%;
+  max-height: 36px;
+  border: 0;
+  padding: @space / 2;
+  background: none;
+  appearance: none;
+  color: inherit;
+}
+.form-btn {
+  &:extend( .whitespace );
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  width: 36px;
+  border: 0;
+  padding: @space / 2 @space / 2 @space / 2;
+  background: none;
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
+}
+.form-input-hidden {
+  display: none;
+}

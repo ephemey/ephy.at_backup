@@ -1,0 +1,35 @@
+//
+// Popup.
+// -----------------------------------------------------------------------------
+// Skin for popup.
+//
+
+// Blocks.
+.popup {
+  color: @popup;
+  background-color: @popup-bg;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0px @popup-shadow;
+}
+.popup:before {
+  border: 7px solid transparent;
+  border-top-color: @popup-tri-shadow;
+}
+.popup:after {
+  border: 6px solid transparent;
+  border-top-color: @popup-bg;
+}
+
+// Elements.
+.popup-item {
+  color: inherit;
+  border-bottom: 1px solid @popup-border;
+}
+.popup-item:hover {
+  color: @popup-hover;
+}
+.popup-item:last-child {
+  border-bottom: 0;
+}

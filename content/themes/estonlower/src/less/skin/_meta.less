@@ -1,0 +1,37 @@
+//
+// Meta.
+// -----------------------------------------------------------------------------
+// Skin for meta.
+//
+
+// Block.
+.meta {
+  color: @meta;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+// Elements.
+.meta-item,
+.like_button + .icon-ui,
+.reblog_button + .icon-ui {
+  color: inherit;
+}
+.meta-item:before,
+.like_button + .icon-ui:before,
+.reblog_button + .icon-ui:before {
+  color: @meta-icon;
+}
+.meta-item:hover {
+  color: @meta-hover;
+}
+.meta-item:hover:before,
+.meta-item:hover .icon-ui:before {
+  color: @meta-icon-hover;
+}
+.liked + .icon-ui:before {
+  color: @liked;
+}
+.meta-item:hover .liked + .icon-ui:before {
+  color: @liked-hover;
+}

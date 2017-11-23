@@ -1,0 +1,36 @@
+//
+// Quote.
+// -----------------------------------------------------------------------------
+// Quote. Not your ordinary blockquote.
+//
+// <blockquote class="quote">
+//   <p class="quote-item">Don't be such a fucking cunt</p>
+//   <cite class="quote-source">Socrates</cite>
+// </quote>
+//
+
+// Block.
+.quote {
+  padding: 0;
+}
+.quote > .quote-item:last-child {
+  &:extend( .wrapper > *:last-child );
+}
+
+// Elements.
+.quote-item {
+  &:extend( .post-title );
+}
+.quote-source {
+  &:extend( .s1 );
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+.quote-source:before {
+  content: '-';
+  margin-right: @space / 4;
+}

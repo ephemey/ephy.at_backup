@@ -1,0 +1,45 @@
+//
+// Dialogue.
+// -----------------------------------------------------------------------------
+// Dialogue of a chat / conversation.
+//
+// <div class="dialogue">
+//   <span class="dialogue-line dialogue-line-alt">
+//     <h5 class="dialogue-item dialogue-title">Dave</h5>
+//     <p class="dialogue-item">Shes my wife now</p>
+//   </span>
+//   <span class="dialogue-line">
+//     <h5 class="dialogue-item dialogue-title">Shop Keeper</h5>
+//     <p class="dialogue-item">Local shop for local people</p>
+//   </span>
+// </div>
+//
+
+// Block.
+.dialogue {
+  &:extend( .whitespace );
+  display: table;
+  width: 100%;
+}
+.dialogue > .dialogue-line:last-child {
+  padding-bottom: 0;
+}
+
+// Elements.
+.dialogue-line {
+  display: table;
+  padding-bottom: @space / 2;
+}
+.dialogue-item {
+  display: table-row;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 0;
+}
+.dialogue-title {
+  &:extend( .s2 );
+  overflow: hidden;
+  width: auto;
+  max-width: inherit;
+  white-space: nowrap;
+}

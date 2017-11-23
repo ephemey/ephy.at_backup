@@ -1,0 +1,25 @@
+//
+// Fade In.
+// -----------------------------------------------------------------------------
+// Element fades in.
+//
+
+[data-ani="fade-in"] {
+  animation-name: fade-in;
+}
+.ie [data-ani="fade-in"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Keyframes.
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

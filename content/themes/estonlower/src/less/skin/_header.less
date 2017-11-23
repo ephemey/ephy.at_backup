@@ -1,0 +1,76 @@
+//
+// Header.
+// -----------------------------------------------------------------------------
+// Skin for header.
+//
+
+// Block.
+.header {}
+
+// Elements.
+.header-title {
+  color: @header-title;
+}
+.header-about,
+.header-form {
+  color: @header-about;
+}
+.header-title {
+  border-bottom: 1px solid @nav-border;
+}
+.header-nav,
+.header-links,
+.header-form .form-label {
+  border-top: 1px solid @nav-border;
+}
+.header-form .form-input {
+  background: @nav-border;
+  color: @nav;
+  border-radius: 3px;
+}
+.header-form ::-webkit-input-placeholder {
+  color: @nav;
+}
+.header-form :-moz-placeholder {
+  color: @nav;
+}
+.header-form ::-moz-placeholder {
+  color: @nav;
+}
+.header-form :-ms-input-placeholder {
+  color: @nav;
+}
+.header-form .form-input:focus,
+.header-form .form-btn:hover {
+  color: @nav-hover;
+}
+.header-about a,
+.header-nav .nav-item a,
+.header-nav .nav-item:hover a,
+.header-links .nav-item:before,
+.header-links .nav-item:hover:before {
+  color: inherit;
+}
+.header-title + .header-nav,
+.header-title + .header-links {
+  border-top: 0;
+}
+.header-about a {
+  color: inherit;
+  border-bottom: 1px dotted;
+}
+.header-credit .nav-item-alt:hover {
+  color: @nav;
+}
+
+// Media Queries.
+@media( min-width: @break-five-query ) {
+  .header-nav,
+  .header-links {
+    border-top: 0;
+  }
+  .header-nav .nav-item:first-child:before,
+  .header-links .nav-item:first-child:after {
+    border-top: 1px solid @nav-border;
+  }
+}

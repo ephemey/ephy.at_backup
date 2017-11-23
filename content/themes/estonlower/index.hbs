@@ -1,0 +1,29 @@
+{{!
+
+    Renders:
+      Featured Post 
+      Post
+
+}}
+
+{{!< default}}
+
+{{#foreach posts}}
+
+{{#if featured}}
+
+{{> "post" }}
+
+{{/if}}
+
+{{/foreach}}
+
+{{#foreach posts}}
+
+{{#unless featured}}
+
+{{> "post" }}
+
+{{/unless}}
+
+{{/foreach}}

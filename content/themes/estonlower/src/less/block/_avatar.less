@@ -1,0 +1,52 @@
+//
+// Avatar.
+// -----------------------------------------------------------------------------
+// An avatar, groovy. Use table / table cell for long names. Support icon.
+//
+// <div class="avatar">
+//   <img class="avatar-item avatar-img">
+//   <h2 class="avatar-item avatar-title">2 Chainz</h2>
+// </div>
+//
+// <div class="avatar">
+//   <img class="avatar-item avatar-img">
+//   <span class="avatar-item">
+//     <h2 class="avatar-title">2 Chainz</h2>
+//     Owner of 2 chains
+//   </span>
+// </div>
+//
+
+// Block.
+.avatar {
+  &:extend( .whitespace );
+  &:extend( .s2 );
+  position: relative;
+  display: table;
+  width: 100%;
+  line-height: @space;
+}
+.avatar:before {
+  font-size: @space * 2;
+  line-height: @space * 2;
+}
+
+// Elements.
+.avatar-item {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 0;
+  margin-bottom: 0;
+}
+.avatar-item > * {
+  display: table-row;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+.avatar-img {
+  max-width: inherit;
+  width: @space * 2 + 2px;
+  height: @space * 2 + 2px;
+  margin-right: @space / 2;
+}

@@ -1,0 +1,19 @@
+{{!
+
+    Renders:
+    Excerpt - Audio, Photo, Text, Video
+    Content - Chat, Link, Quote
+
+    Microdata:
+      Description - Audio, Photo, Text, Video
+
+}}
+
+{{^is "post, page"}}
+
+{{^has tag="_chat, _link, _quote"}}
+<p itemprop="description" class="post-excerpt" data-js="excerpt">{{excerpt words="50"}}</p>
+{{/has}}
+
+{{/is}}
+

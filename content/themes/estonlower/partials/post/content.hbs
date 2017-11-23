@@ -1,0 +1,14 @@
+{{!
+
+    Renders:
+      Content - Audio, Photo, Text, Video
+
+}}
+
+{{#is "post, page"}}
+
+{{^has tag="_chat, _link, _quote"}}
+  {{content}}
+{{/has}}
+
+{{/is}}

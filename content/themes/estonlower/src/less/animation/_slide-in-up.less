@@ -1,0 +1,27 @@
+//
+// Animation Slide In Up.
+// -----------------------------------------------------------------------------
+// Element slides in and up, from half a space below its final position.
+//
+
+[data-ani="slide-in-up"] {
+  animation-name: slide-in-up;
+}
+.ie [data-ani="slide-in-up"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Keyframes.
+@keyframes slide-in-up {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY( @space / 2 );
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY( 0 );
+  }
+}

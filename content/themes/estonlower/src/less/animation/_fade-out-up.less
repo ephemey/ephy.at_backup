@@ -1,0 +1,27 @@
+//
+// Fade Out Up.
+// -----------------------------------------------------------------------------
+// Element fades / slides up and out from half a space below its final position.
+//
+
+[data-ani="fade-out-up"] {
+  animation-name: fade-out-up;
+}
+.ie [data-ani="fade-out-up"] {
+  visibility: visible;
+  opacity: 0;
+}
+
+// Keyframes.
+@keyframes fade-out-up {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY( 0 );
+  }
+  100% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY( -(@space / 2) );
+  }
+}

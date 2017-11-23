@@ -1,0 +1,27 @@
+//
+// Slide In Down.
+// -----------------------------------------------------------------------------
+// Element slides in and down, from half a space below its final position.
+//
+
+[data-ani="slide-in-down"] {
+  animation-name: slide-in-down;
+}
+.ie [data-ani="slide-in-down"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Keyframes.
+@keyframes slide-in-down {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY( -( @space / 2 ) );
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY( 0 );
+  }
+}

@@ -1,0 +1,31 @@
+{{! 站点统计 }}
+<nav class="navigation site-stat">
+    <div class="site-stat-item">
+        <span class="site-stat-item-count">
+            {{! count posts }}
+            {{#get "posts" as |posts postPages|}}
+                {{! Use our pages (pagination) object }}
+                {{postPages.total}}
+            {{/get}}
+        </span>
+        <span class="site-stat-item-name">Posts</span>
+    </div>
+    <div class="site-stat-item">
+        <span class="site-stat-item-count">
+            {{#get "posts" filter="featured:true" as |featured featuredPages|}}
+                {{featuredPages.total}}
+            {{/get}}
+        </span>
+        <span class="site-stat-item-name">Feat</span>
+    </div>
+    <div class="site-stat-item">
+        <span class="site-stat-item-count">
+            {{! count tags }}
+            {{#get "tags" as |tags tagPages|}}
+                {{! Use our pages (pagination) object }}
+                {{tagPages.total}}
+            {{/get}}
+        </span>
+        <span class="site-stat-item-name">Tags</span>
+    </div>
+</nav>

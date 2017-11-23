@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lte IE 9 ]> <html itemscope itemtype="http://schema.org/Blog" class="ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
+  <head>
+
+    <title>{{meta_title}}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{! Page Meta }}
+    <meta name="description" content="{{meta_description}}">
+    <meta name="Designer" content="mikedidthis">
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Theme CSS }}
+    <link rel="stylesheet" href="{{asset "css/eston-layout.min.css"}}">
+    <link rel="stylesheet" href="{{asset "css/eston-skin-ocean.min.css"}}">
+
+    {{! Ghost Header }}
+    {{ghost_head}}
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <header role="header" class="header" data-ani="hide" data-js="header">
+        <div class="wrapper header-wrapper">
+
+          {{! Credits }}
+          {{> "credits" }}
+
+          {{!> Logo }}
+          {{> "logo" }}
+
+          {{! Title }}
+          {{> "title" }}
+
+          {{! Description }}
+          {{> "description" }}
+
+          {{! Navigation }}
+          {{navigation}}
+
+          {{! Links }}
+          {{> "links" }}
+
+          <!-- {{! Mailchimp Form}}
+          {{!> "mailchimp-form" }} -->
+
+        </div>
+      </header>
+
+      <main role="main" class="main">
+
+        <div class="wrapper">
+
+          {{! Posts }}
+          {{{body}}}
+
+          {{! Dribbble }}
+          {{!> "dribbble" }}
+
+          <!-- {{! Instagram }}
+          {{> "instagram" }} -->
+
+        </div>
+
+        {{! Pagination }}
+        {{#if pagination.prev}}
+          {{pagination}}
+        {{else}}
+        {{#if pagination.next}}
+          {{pagination}}
+        {{/if}}
+        {{/if}}
+
+      </main>
+
+    </div>
+
+    {{! Theme Javascript }}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{asset "js/eston-core.min.js"}}"></script>
+
+    {{! Ghost Footer }}
+    {{ghost_foot}}
+
+    <script>
+
+      // Events.
+      eston.events.on( 'hover.start', function ( e, $header, $cover, $footer ) {
+        $header.attr( 'data-ani', 'slide-in-down' );
+        $cover.attr( 'data-ani', 'fade-in' );
+        $footer.attr( 'data-ani', 'slide-in-up' );
+      });
+      eston.events.on( 'hover.stop', function ( e, $header, $cover, $footer ) {
+        $header.attr( 'data-ani', 'fade-out-up' );
+        $cover.attr( 'data-ani', 'fade-out' );
+        $footer.attr( 'data-ani', 'fade-out-down' );
+      });
+      eston.events.on( 'popup.open', function ( e, $popup, $list ) {
+        $list.attr( 'data-ani', 'slide-in-up' );
+      });
+      eston.events.on( 'popup.close', function ( e, $popup, $list ) {
+        $list.attr( 'data-ani', 'fade-out-down' );
+      });
+      eston.events.on( 'start.complete', function ( e, $posts ) {
+        $posts.attr( 'data-ani', 'slide-in-up' );
+        $( '[data-js~="pager"]' ).attr( 'data-ani', 'fade-in' );
+      });
+
+      // Start.
+      eston.start( {{> "config" }} );
+
+      // Show header.
+      $( '[data-js~="header"]' ).attr( 'data-ani', 'fade-in' );
+
+    </script>
+
+    <!-- {{! Disqus }}
+    {{> "disqus" }}
+
+    {{! Google Analytics }}
+    {{> "google-analytics" }} -->
+
+    {{! Highlight.js }}
+    {{> "highlight-js" }}
+
+
+
+
+  </body>
+</html>

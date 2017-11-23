@@ -1,0 +1,32 @@
+{{!
+
+    Renders:
+      Anchor - Audio, Photo, Text, Video
+
+}}
+
+{{^is "post,page"}}
+
+{{#if image}}
+{{^has tag="_quote, _link, _chat, _audio, _video"}}
+<p class="post-more">
+  <a href="{{url}}">Read More</a>
+</p>
+{{/has}}
+{{/if}}
+
+{{^if image}}
+{{^has tag="_quote, _link, _chat, _audio, _video"}}
+<p class="post-more">
+  <a href="{{url}}">Read More</a>
+</p>
+{{/has}}
+{{/if}}
+
+{{#has tag="_audio, _video"}}
+<p class="post-more">
+  <a href="{{url}}">Read More</a>
+</p>
+{{/has}}
+
+{{/is}}

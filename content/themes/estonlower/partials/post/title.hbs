@@ -1,0 +1,34 @@
+{{!
+
+    Renders:
+      Post Title - Text, Photo, Audio, Video
+
+    Microdata:
+      Headline - Text, Photo, Audio, Video
+      URL - Text, Photo, Audio, Video
+
+}}
+
+{{^if image}}
+{{^has tag="_quote, _link, _chat, _audio, _video"}}
+<h2 itemprop="headline" class="post-title">
+  <a itemprop="url" href="{{url}}" title="{{title}}">{{title}}</a>
+</h2>
+{{/has}}
+{{/if}}
+
+{{#if image}}
+{{^has tag="_quote, _link, _chat, _audio, _video"}}
+<h2 itemprop="headline" class="post-title">
+  <a itemprop="url" href="{{url}}" title="{{title}}">{{title}}</a>
+</h2>
+{{/has}}
+{{/if}}
+
+{{^if image}}
+{{#has tag="_audio, _video"}}
+<h2 itemprop="headline" class="post-title">
+  <a itemprop="url" href="{{url}}" title="{{title}}">{{title}}</a>
+</h2>
+{{/has}}
+{{/if}}

@@ -1,0 +1,55 @@
+{{!
+
+    Renders:
+      Post Share List and Counts
+      Post Shares Total Count
+
+}}
+
+{{^is "page"}}
+<!--
+<div class="icon-ui icon-ui-share meta-item meta-share" data-js="popup share">
+
+  <div class="popup" data-ani="hide" data-js="popup-list">
+
+    {{!-- Facebook --}}
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" class="icon icon-facebook popup-item" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="meta-count" data-js="share-facebook-count">0</span><span class="meta-plural" data-js="share-facebook-plural"> Share</span>
+    </a>
+
+    {{!-- Google Plus --}}
+    {{!--<a href="https://plus.google.com/share?url={{url absolute="true"}}" class="icon icon-googleplus popup-item" onclick="window.open(this.href, 'google-plus-share', 'width=475,height=435');return false;">
+      <span class="meta-count" data-js="share-googleplus-count">0</span><span class="meta-plural" data-js="share-googleplus-plural"> Share</span>
+    </a>--}}
+    
+    {{!-- LinkedIn --}}
+    {{!--<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{encode title}}" class="icon icon-linkedin popup-item" onclick="window.open(this.href, 'linkedin-share', 'width=550,height=550');return false;">
+      <span class="meta-count" data-js="share-linkedin-count">0</span><span class="meta-plural" data-js="share-linkedin-plural"> Share</span>
+    </a>--}}
+    
+    {{!-- Pinterest --}}
+    {{#if image}}
+    {{^has tag="_quote, _link, _chat, _audio, _video"}}
+    <a href="http://pinterest.com/pin/create/button/?url={{url absolute="true"}}&amp;description={{encode title}}{{#if image}}{{^has tag="_embed"}}&amp;media={{@blog.url}}{{image}}{{/has}}{{/if}}" class="icon icon-pinterest popup-item" onclick="window.open(this.href, 'pinterest-share', 'width=770,height=330');return false;">
+      <span class="meta-count" data-js="share-pinterest-count">0</span><span class="meta-plural" data-js="share-pinterest-plural"> Pin</span>
+    </a>
+    {{/has}}
+    {{/if}}
+    
+    {{!-- Stumbleupon --}}
+    {{!--<a href="http://www.stumbleupon.com/submit?title={{encode title}}&amp;url={{url absolute="true"}}" class="icon icon-stumbleupon popup-item" onclick="window.open(this.href, 'stumbleupon-share', 'width=550,height=235');return false;">
+      <span class="meta-count" data-js="shares-stumbleupon-count">0</span><span class="meta-plural" data-js="share-stumbleupon-plural"> Share</span>
+    </a>--}}
+    
+    {{!-- Twitter --}}
+    <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" class="icon icon-twitter popup-item" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="meta-count" data-js="share-twitter-count">0</span><span class="meta-plural" data-js="share-twitter-plural"> Tweet</span>
+    </a>
+
+  </div>
+
+  <span class="meta-count" data-js="share-total-count">0</span><span class="meta-plural" data-js="share-total-plural"> Share</span>
+
+</div>
+-->
+{{/is}}

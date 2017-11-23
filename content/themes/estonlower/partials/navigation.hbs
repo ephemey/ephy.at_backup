@@ -1,0 +1,29 @@
+{{!
+
+    Renders:
+      Header Navigation
+
+    Microdata:
+      Site Navigation Element
+      Site Navigation Element URL
+      Site Navigation Element Name
+
+}}
+
+{{#foreach navigation}}
+
+{{#if @first}}
+<nav class="nav header-item header-nav" role="navigation">
+{{/if}}
+
+  <span itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item{{#if current}} nav-item-current{{/if}}">
+    <a itemprop="url" href="{{url absolute="true"}}" title="{{label}}">
+      <span itemprop="name">{{label}}</span>
+    </a>
+  </span>
+
+{{#if @last}}
+</nav>
+{{/if}}
+
+{{/foreach}}

@@ -1,0 +1,36 @@
+//
+// Post Overlay.
+// -----------------------------------------------------------------------------
+// Skin for post--overlay.
+//
+
+// Block
+.post--overlay {}
+
+// Elements
+.post--overlay .post-header,
+.post--overlay .post-footer {
+  background-color: transparent;
+}
+.post--overlay .post-cover {
+  background-color: @post--overlay-bg-start;
+}
+.post--overlay .post-author,
+.post--overlay .meta {
+  color: @post--overlay;
+}
+.post--overlay .post-author:hover,
+.post--overlay .meta-item:hover,
+.post--overlay .meta-link:hover {
+  color: @post--overlay-hover;
+}
+.post--overlay .post-author:before,
+.post--overlay .meta-item:before,
+.post--overlay .meta-link:before {
+  color: @post--overlay-icon;
+}
+.post--overlay .post-author:hover:before,
+.post--overlay .meta-item:hover:before,
+.post--overlay .meta-link:hover:before {
+  color: @post--overlay-icon-hover;
+}

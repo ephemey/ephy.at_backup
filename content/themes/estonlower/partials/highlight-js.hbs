@@ -1,0 +1,20 @@
+{{!
+
+    Renders:
+      Highlight.js - Syntax Highlighting
+
+}}
+
+{{#is "post"}}
+
+<script src="{{asset "js/highlight.pack.js"}}"></script>
+
+<script>
+  $('pre').each( function() {
+
+    hljs.highlightBlock( this );
+  
+  });
+</script>
+
+{{/is}}

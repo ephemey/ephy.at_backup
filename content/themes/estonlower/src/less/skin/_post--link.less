@@ -1,0 +1,19 @@
+//
+// Post Link.
+// -----------------------------------------------------------------------------
+// Skin for post--link.
+//
+
+// Block
+.post--link {}
+
+// Elements
+.post--link .post-title a {
+  &:extend( a );
+  &:extend( .post-body p a );
+}
+.post--link .post-title a:hover {
+  &:extend( a:hover );
+  &:extend( .post-body p a:hover );
+}
+

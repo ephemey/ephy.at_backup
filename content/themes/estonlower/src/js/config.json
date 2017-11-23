@@ -1,0 +1,47 @@
+/*
+
+  Eston Config
+
+*/
+
+{
+
+  "author"  : "mikedidthis",
+  "version" : "1.4.2",
+
+  "dribbble" : {
+    "data" : {
+      "access_token": "",
+      "page" : 1,
+      "per_page" : 1,
+      "response" : "data"
+    },
+    "cache" : true,
+    "dataType" : "jsonp",
+    "url" : ""
+  },
+
+  "instagram" : {
+    "data" : {
+      "access_token" : "",
+      "count" : 33,
+      "page" : 1,
+      "per_page" : 1,
+      "response" : "data"
+    },
+    "cache" : true,
+    "dataType" : "jsonp",
+    "url" : ""
+  },
+
+  "share" : {
+    "data" : {
+      "apikey" : "",
+      "url" : "",
+    },
+    "cache" : true,
+    "dataType" : "json",
+    "url" : "//free.sharedcount.com/"
+  }
+
+}

@@ -1,0 +1,33 @@
+//
+// Post Cover.
+// -----------------------------------------------------------------------------
+// Post with a cover embed / image.
+//
+
+// Block.
+.post--cover {
+
+}
+
+// Elements.
+.post--cover .post-header {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.post--cover .post-media iframe,
+.post--cover .post-media img,
+.post--cover .post-media object {
+  width: 100%
+}
+.post--cover .post-body {
+  margin-top: 0;
+}
+.post--cover .post-body iframe:first-of-type {
+  display: none;
+}
+.post--cover .post-body iframe:first-of-type:last-child {
+  &:extend( .whitespace-fix );
+}
